@@ -1,27 +1,24 @@
 import React, { Component } from 'react'
 import PokemonListItem from './PokemonListItem'
+import pokemonList from './data/pokemonlist'
 
 export class SearchPanel extends Component {
 
-  cons
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemonList: pokemonList
+    }
+  }
 
   render() {
-    let pokemonList = [
-      {
-        name: 'Bulbasaur'
-      },
-      {
-        name: 'Ivysaur'
-      }
-    ];
-    
     return (
       <div>
         <div>
-          <input type='text' placeholder='Search...'/>
+          <input type='text' placeholder='Search...' />
         </div>
         <div>
-          <PokemonListItem pokemonList={pokemonList}/>
+          <PokemonListItem pokemonList={pokemonList} />
         </div>
       </div>
     )
