@@ -7,7 +7,7 @@ export default class PokemonListItem extends Component {
     return (
       this.props.pokemonList.map((pokemon) =>
         <div className="container">
-          <div className="item"><img src={Image} alt='bulbasaur-icon' width='50' /></div>
+          <div className="item"><img src={require('./img/icons/' + pokemon.number + '.png')} alt='bulbasaur-icon' width='50' /></div>
           <div className="item"><p>{pokemon.name}</p></div>
         </div>
       )
