@@ -2,4 +2,5 @@
 #searchPanel {
   overflow-y: scroll;
   height: 90vh;
+  background-color: #FF9EFB;
 }

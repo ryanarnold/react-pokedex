@@ -1,4 +1,4 @@
-.container {
+.container-pokemon-list-item {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
