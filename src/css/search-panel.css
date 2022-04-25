@@ -3,6 +3,7 @@
   background-color: #FF9EFB;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 30px;
 }
 
 #searchPanel input {
@@ -13,7 +14,7 @@
 
 #searchResults {
   overflow-y: scroll;
-  height: 90vh;
+  height: 80vh;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
 }
