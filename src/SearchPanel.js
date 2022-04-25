@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PokemonListItem from './PokemonListItem'
 import pokemonListComplete from './data/pokemonlist'
+import './css/search-panel.css';
 
 export class SearchPanel extends Component {
 
@@ -35,7 +36,7 @@ export class SearchPanel extends Component {
             <input type='text' placeholder='Search...' onChange={this.handleChange} autoFocus/>
           </form>
         </div>
-        <div>
+        <div id='searchPanel'>
           <PokemonListItem pokemonList={this.state.pokemonList} />
         </div>
       </div>
