@@ -13,7 +13,7 @@ export class SearchPanel extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.updateInfoPanel = this.updateInfoPanel.bind(this);
+    // this.updateInfoPanel = this.updateInfoPanel.bind(this);
   }
 
   handleSubmit(event) {
@@ -29,10 +29,6 @@ export class SearchPanel extends Component {
     console.log(this.state.searchQuery)
   }
 
-  updateInfoPanel(event) {
-    console.log(event.target.innerHTML);
-  }
-
   render() {
     return (
       <div id='searchPanel'>
@@ -42,7 +38,7 @@ export class SearchPanel extends Component {
           </form>
         </div>
         <div id='searchResults'>
-          <PokemonListItem pokemonList={this.state.pokemonList} onClick={this.updateInfoPanel}/>
+          <PokemonListItem pokemonList={this.state.pokemonList} onClick={this.props.updateInfoPanel}/>
         </div>
       </div>
     )
