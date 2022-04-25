@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PokemonListItem from './PokemonListItem'
 import pokemonListComplete from './data/pokemonlist'
+import './css/search-panel.css';
 
 export class SearchPanel extends Component {
 
@@ -12,6 +13,7 @@ export class SearchPanel extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    // this.updateInfoPanel = this.updateInfoPanel.bind(this);
   }
 
   handleSubmit(event) {
@@ -29,14 +31,14 @@ export class SearchPanel extends Component {
 
   render() {
     return (
-      <div>
+      <div id='searchPanel'>
         <div>
           <form>
             <input type='text' placeholder='Search...' onChange={this.handleChange} autoFocus/>
           </form>
         </div>
-        <div>
-          <PokemonListItem pokemonList={this.state.pokemonList} />
+        <div id='searchResults'>
+          <PokemonListItem pokemonList={this.state.pokemonList} onClick={this.props.updateInfoPanel}/>
         </div>
       </div>
     )
