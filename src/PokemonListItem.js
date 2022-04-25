@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Image from './img/icon-001-bulbasaur.png';
 import './css/pokemon-list-item.css';
 
 export default class PokemonListItem extends Component {
