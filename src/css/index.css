@@ -1,5 +1,5 @@
 .container-app {
   display: grid;
-  grid-template-columns: 1fr auto 5fr 1fr;
+  grid-template-columns: 4fr 2fr 5fr 4fr;
   grid-template-rows: auto auto;
 }

@@ -30,13 +30,13 @@ export class SearchPanel extends Component {
 
   render() {
     return (
-      <div>
+      <div id='searchPanel'>
         <div>
           <form>
             <input type='text' placeholder='Search...' onChange={this.handleChange} autoFocus/>
           </form>
         </div>
-        <div id='searchPanel'>
+        <div id='searchResults'>
           <PokemonListItem pokemonList={this.state.pokemonList} />
         </div>
       </div>

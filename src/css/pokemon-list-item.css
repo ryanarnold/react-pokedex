@@ -1,5 +1,5 @@
 .container-pokemon-list-item {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: auto auto;
 }
