@@ -82,3 +82,8 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 }
+
+img {
+  margin-right: 10px;
+  width: 40px;
+}

@@ -14,10 +14,11 @@ class App extends Component {
       currentPokemon: {
         name: 'Bulbasaur',
         kind: 'Bulb Pokemon',
-        type: ['Grass', 'Poison'],
+        type: ['grass', 'poison'],
         height: '4',
         weight: '10',
-        trivia: 'Bulbasaur is a pokemon'
+        trivia: 'Bulbasaur is a pokemon',
+        artwork: './img/bulbasaur.webp'
       }
     }
 
@@ -39,14 +40,23 @@ class App extends Component {
           .then(response => {
             const speciesData = response.data;
 
+            const types = pokemonData.types.map(type => {
+              return type.type.name;
+            })
+
+            const english_flavor_text = speciesData.flavor_text_entries.find(entry => {
+              return entry.language.name === 'en'
+            });
+
             this.setState({
               currentPokemon: {
                 name: this.capitalizeFirstLetter(pokemonName),
                 kind: speciesData.genera[7].genus,
-                type: ['test'],
+                type: types,
                 height: pokemonData.height,
                 weight: pokemonData.weight,
-                trivia: speciesData.flavor_text_entries[0].flavor_text
+                trivia: english_flavor_text.flavor_text,
+                artwork: pokemonData.sprites.other['official-artwork'].front_default
               }
             });
           });
