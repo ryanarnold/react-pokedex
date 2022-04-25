@@ -1,0 +1,84 @@
+#infoPanel {
+  height: fit-content;
+  background-color: #CFD4FF;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#infoPicDiv {
+  place-self: center center;
+  padding: 20px;
+}
+
+#infoPic {
+  width: 120px;
+}
+
+#infoName {
+  background-color: #FF7070;
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px;
+}
+
+#infoKind {
+  background-color: white;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+}
+
+#infoType {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#infoHeight,
+#infoWeight {
+  background-color: white;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.heightWeight {
+  text-align: right;
+  padding-right: 10px;
+}
+
+#infoHeight {
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#infoWeight {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#infoTrivia {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #FF7070;
+  padding: 20px;
+}
+
+.container-info {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
