@@ -3,3 +3,8 @@
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto auto;
 }
+
+p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
