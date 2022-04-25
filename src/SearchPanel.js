@@ -1,24 +1,42 @@
 import React, { Component } from 'react'
 import PokemonListItem from './PokemonListItem'
-import pokemonList from './data/pokemonlist'
+import pokemonListComplete from './data/pokemonlist'
 
 export class SearchPanel extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      pokemonList: pokemonList
+      pokemonList: pokemonListComplete,
+      searchQuery: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+  }
+  
+  handleChange(event) {
+    const searchQuery = event.target.value;
+
+    const pokemonList = pokemonListComplete.filter(pokemon => pokemon.name.startsWith(searchQuery))
+
+    this.setState({ searchQuery, pokemonList });
+    console.log(this.state.searchQuery)
   }
 
   render() {
     return (
       <div>
         <div>
-          <input type='text' placeholder='Search...' />
+          <form>
+            <input type='text' placeholder='Search...' onChange={this.handleChange} autoFocus/>
+          </form>
         </div>
         <div>
-          <PokemonListItem pokemonList={pokemonList} />
+          <PokemonListItem pokemonList={this.state.pokemonList} />
         </div>
       </div>
     )
